@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag "post", media:  "all" %>
+
+<div class = "container">
+  <h2 class = "title">問題をつくる</h2>
+  <div class = "create-form">
+    <%= form_tag("/post/new") do %>
+    <input class = "title-input" placeholder="タイトル">
+    <div class = "radio-btn">
+      <div class = "difficult-btn">
+        <input  class = "radio" type = "radio" name = "difficult" value = "かんたん"><p>かんたん</p>
+      </div>
+      <div class = "difficult-btn">
+        <input  class = "radio" type = "radio" name = "difficult" value = "ふつう"><p>ふつう</p>
+      </div>
+      <div class = "difficult-btn">
+        <input  class = "radio" type = "radio" name = "difficult" value = "むずかしい"><p>むずかしい</p>
+      </div>
+    </div>
+    <textarea placeholder="問題内容" name = "content" class = "question"></textarea>
+    <textarea placeholder="ヒント" name = "hint" class = "hint"></textarea>
+    <textarea placeholder="解答コード" name = "answer" class = "answer"></textarea>
+    <div class = "language">
+      <p>解答コードの言語はなんですか？</p>
+      <select name = "language" class = "language-list">
+        <option value = "C" label = "C"></option>
+        <option value = "Ruby" label = "Ruby"></option>
+        <option value = "Python" label = "Python"></option>
+        <option value = "Java" label = "Java"></option>
+      </select>
+    </div>
+    <input class = "submit-btn" type = "submit" value = "投稿する!">
+    <% end %>
+  </div>
+</div>

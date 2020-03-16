@@ -1,32 +1,62 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
 *{
   box-sizing: border-box;
 }
 
-body{
-
-  margin: 0 auto;
+a{
+  text-decoration: none;
 }
 
-header{
-  height:100px;
-  background-image: url("/header.png");
-  background-size: cover;
+li{
+  list-style: none;
 }
 
-.header-logo{
-  height:100px;
-  line-height: 100px;
-  color:white;
-  font-style:bold;
+.header-container{
+  width:100%;
+  height:70px;
+  background-image:url("/header.png");
+  background-size:cover;
+}
+
+.header-logo a{
   float:left;
-  font-size:60px;
+  color:white;
+  font-size:50px;
+  margin:0 20px;
+  font-weight:bold;
+  line-height: 70px;
 }
 
 .header-right{
   float:right;
-  height:60px;
+  padding-top:10px;
+  line-height:70px;
+  font-size:25px;
+}
+
+.header-right a{
   color:white;
-  font-size:30px;
-  padding-top:40px;
-  padding-right:10px;
+}
+
+.footer-container{
+  width:100%;
+  height:100px;
+  background-color:#ff8e1e
+}
+
+.footer-logo{
+  float:left;
+  line-height:100px;
+  padding: 0 20px;
+}
+
+.header-right li{
+  float:left;
+  padding: 0 10px;
 }

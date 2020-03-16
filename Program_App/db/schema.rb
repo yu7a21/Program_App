@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200310190952) do
+ActiveRecord::Schema.define(version: 20200313081229) do
 
   create_table "follows", force: :cascade do |t|
     t.integer  "follow_id"
@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(version: 20200310190952) do
     t.integer  "diffuclt"
     t.text     "hint"
     t.text     "answer"
-    t.integer  "answer_la"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text     "title"
+    t.text     "difficult"
+    t.text     "answer_la"
   end
 
   create_table "users", force: :cascade do |t|
