@@ -1,57 +1,23 @@
 <%= stylesheet_link_tag "home", media:  "all" %>
 
-<div class = "container">
-  <h2 class = "top-title">人気投稿ランキング</h2>
-  <div class = "contents">
-    <div class = "content-block">
-      <h2 class = "rank">1.</h2>
-      <div class = "content">
-        <div class = "content-heading">
-          <h2>タイトル</h2>
-          <div class = "user">
-            <img src = "/user_image/1.jpg" class = "user_image">
-            <h3>ユーザ名</h3>
+<div class = "top-body">
+  <div class = "container">
+    <h2 class = "top-title">新規投稿</h2>
+    <div class = "contents">
+      <div class = "content-block">
+        <% @post.each do|post| %>
+        <h2 class = "rank">1.</h2>
+        <div class = "content">
+          <div class = "content-heading">
+            <h2><%= post.title %></h2>
+            <div class = "user">
+              <img src = "/user_image/1.jpg" class = "user_image">
+              <h3>ユーザ名</h3>
+            </div>
           </div>
+          <p><%= post.content%></p>
         </div>
-        <p>する確認可能ませ文章を引用定め、その要件を有するて組み合わせで編集しこ
-とから公表なるれない。したがってと、著作記事が反映限られてください俳句
-がまずいい掲げることは、許諾ですで、場合については引用権の引用として文
-章上の問題はありことに、名引用法も、可能の著作がさて文が紛争できでてい
-るなけれない。保護できて、それの著作は短いまでしでで。</p>
-      </div>
-    </div>
-    <div class = "content-block">
-      <h2 class = "rank">2.</h2>
-      <div class = "content">
-        <div class = "content-heading">
-          <h2>タイトル</h2>
-          <div class = "user">
-            <img src = "/user_image/1.jpg" class = "user_image">
-            <h3>ユーザ名</h3>
-          </div>
-        </div>
-        <p>する確認可能ませ文章を引用定め、その要件を有するて組み合わせで編集しこ
-           とから公表なるれない。したがってと、著作記事が反映限られてください俳句
-           がまずいい掲げることは、許諾ですで、場合については引用権の引用として文
-           章上の問題はありことに、名引用法も、可能の著作がさて文が紛争できでてい
-           るなけれない。保護できて、それの著作は短いまでしでで。</p>
-      </div>
-    </div>
-    <div class = "content-block">
-      <h2 class = "rank">3.</h2>
-      <div class = "content">
-        <div class = "content-heading">
-          <h2>タイトル</h2>
-          <div class = "user">
-            <img src = "/user_image/1.jpg" class = "user_image">
-            <h3>ユーザ名</h3>
-          </div>
-        </div>
-        <p>する確認可能ませ文章を引用定め、その要件を有するて組み合わせで編集しこ
-           とから公表なるれない。したがってと、著作記事が反映限られてください俳句
-           がまずいい掲げることは、許諾ですで、場合については引用権の引用として文
-           章上の問題はありことに、名引用法も、可能の著作がさて文が紛争できでてい
-           るなけれない。保護できて、それの著作は短いまでしでで。</p>
+        <% end %>
       </div>
     </div>
   </div>

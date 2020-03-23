@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "user", media:  "all" %>
+
+<div class = "container">
+  <div class = "prof-body">
+    <img src = "<%="/user_image/#{@user.image_name}"%>" class = "usertop">
+    <p class = "username"><%= @user.name %></p>
+    <%= @user.bio %>
+    <%= link_to("編集","/user/#{@user.id}/edit") %>
+  </div>
+</div>

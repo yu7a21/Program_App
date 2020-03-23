@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "user", media:  "all" %>
+
+<div class = "image-body">
+  <div class = "container">
+    <div class = "input-container">
+      <%= form_tag("/user/new") do %>
+        <h3>ようこそ！</h3>
+        <div class = "input-block">
+          <% @user.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <p></p><h5>希望するユーザ名を入力してください</h5>
+          <p>USERNAME:</p><input value = "<%=@user.name%>" name = "user_name" class = "inputform">
+        </div>
+        <div class = "input-block">
+          <p></p><h5>利用可能なメールアドレスを入力してください</h5>
+          <p>EMAIL:</p><input value = "<%=@user.email%>" name = "email" class = "inputform">
+        </div>
+        <div class = "input-block">
+          <p></p><h5>6文字以上のパスワードを決めてください</h5>
+          <p>PASSWORD:</p><input value = "<%=@user.password%>" name = "password" class = "inputform">
+        </div>
+          <input class = "btn log-btn" type = "submit" value = "登録する">
+        <% end %>
+    </div>
+  </div>
+</div>

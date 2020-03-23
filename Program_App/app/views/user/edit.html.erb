@@ -1,0 +1,35 @@
+<%= stylesheet_link_tag "user", media:  "all" %>
+
+  <div class = "image-body ed">
+    <div class = "edit-body">
+      <h2>ユーザ情報の編集</h2>
+      <% @user.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+      <%= form_tag("/user/#{@user.id}/update", {multipart:true}) do%>
+        <div class = "input-block">
+          <p></p><h5>プロフィール画像を設定してください</h5>
+          <p>IMAGE:</p><input name = "image" type = "file" class = "inputfileform">
+        </div>
+        <div class = "input-block">
+          <p></p><h5>希望するユーザ名を登録してください</h5>
+          <p>USERNAME:</p><input value = "<%=@user.name%>" name = "name" class = "inputform">
+        </div>
+        <div class = "input-block">
+          <p></p><h5>利用可能なメールアドレスを入力してください</h5>
+          <p>EMAIL:</p><input value = "<%=@user.email%>" name = "email" class = "inputform">
+        </div>
+        <div class = "input-block">
+          <p></p><h5>6文字以上のパスワードを決めてください</h5>
+          <p>PASSWORD:</p><input value = "<%=@user.password%>" name = "password" class = "inputform">
+        </div>
+        <div class = "input-block">
+          <p></p><h5>プロフィールを登録しましょう</h5>
+          <p></p><textarea name = "bio" class = "inputform bio"><%=@user.bio%></textarea>
+        </div>
+        <input class = "btn log-btn" type = "submit" value = "編集完了">
+      <% end %>
+    </div>
+  </div>

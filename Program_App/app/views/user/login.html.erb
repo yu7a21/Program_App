@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "user", media:  "all" %>
+
+<div class = "image-body">
+  <div class = "container">
+    <div class = "input-container">
+      <%= form_tag("/user/login_action") do %>
+        <h3>ログイン</h3>
+        <div class = "input-block">
+          <p>EMAIL:</p><input name = "email" class = "inputform">
+        </div>
+        <div class = "input-block">
+          <p>PASSWORD:</p><input name = "password" class = "inputform">
+        </div>
+          <input class = "btn log-btn" type = "submit" value = "LOG IN">
+      </div>
+    <% end %>
+    <div class = "signup-container">
+      <h3>初めての方はこちら</h3>
+      <a href = "/user/signup" class = "btn">新規登録</a>
+    </div>
+  </div>
+</div>

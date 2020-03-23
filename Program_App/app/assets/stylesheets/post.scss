@@ -1,6 +1,8 @@
 .container{
   width:80%;
+  height:100%;
   margin:0 auto;
+  padding-bottom:100px;
 }
 
 .title{
@@ -11,6 +13,7 @@
 .create-form{
   text-align: center;
   border:2px solid #eee;
+  margin-bottom:10px;
 }
 
 .title-input{

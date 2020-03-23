@@ -17,11 +17,24 @@ li{
   list-style: none;
 }
 
+body{
+  position:relative;
+}
+
+html, body{
+  height:100%;
+}
+
+.wrap{
+  width:100%;
+  position:relative;
+  min-height: 100%;
+}
+
 .header-container{
   width:100%;
   height:70px;
-  background-image:url("/header.png");
-  background-size:cover;
+  background-color:rgba(255,135,9,1.0);
 }
 
 .header-logo a{
@@ -44,19 +57,32 @@ li{
   color:white;
 }
 
-.footer-container{
+footer{
   width:100%;
   height:100px;
-  background-color:#ff8e1e
+  background-color:rgba(0, 64, 103, 1.0);
+  position: absolute;
+  bottom:0;
 }
 
 .footer-logo{
   float:left;
   line-height:100px;
   padding: 0 20px;
+  color:white;
 }
 
 .header-right li{
   float:left;
   padding: 0 10px;
+}
+
+.login-container h3{
+  font-size:30px;
+  padding: 10px 0;
+}
+
+.subscribe-container h3{
+  padding-top:5px;
+  color:white;
 }

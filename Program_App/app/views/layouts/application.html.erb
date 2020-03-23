@@ -6,33 +6,38 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
-
-  <header>
-    <div class = "header-container">
-      <div class = "header-logo">
-        <a href = "/">Program_App</a>
-      </div>
-      <ul class = "header-right">
-        <li>
-          <a href = "/post/create">問題を投稿する</a>
-        </li>
-        <li>
-          <a href = "#">ログイン</a>
-        <li>
-      </ul>
-    </div>
-  </header>
-
   <body>
-    <%= yield %>
-  </body>
+    <div class = "wrap">
+      <header>
+        <div class = "header-container">
+          <div class = "header-logo">
+            <a href = "/">Program_App</a>
+          </div>
+          <ul class = "header-right">
+            <li>
+              <a href = "/post/create">問題を投稿する</a>
+            </li>
+            <li>
+              <a href = "/user/login">ログイン</a>
+            <li>
+          </ul>
+        </div>
+      </header>
 
-  <footer>
-    <div class = "footer-container">
-      <div class = "footer-logo">
-        <h2>Program_App</h2>
+
+        <%= yield %>
+
+
+        <footer>
+          <div class = "footer-container">
+            <div class = "footer-logo">
+              <h2>Program_App</h2>
+            </div>
+          </div>
+        </footer>
       </div>
-    </div>
-  </footer>
+    </body>
+
 </html>

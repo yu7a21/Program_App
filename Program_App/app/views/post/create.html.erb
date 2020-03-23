@@ -4,7 +4,7 @@
   <h2 class = "title">問題をつくる</h2>
   <div class = "create-form">
     <%= form_tag("/post/new") do %>
-    <input class = "title-input" placeholder="タイトル">
+    <input class = "title-input" name = "title" placeholder="タイトル">
     <div class = "radio-btn">
       <div class = "difficult-btn">
         <input  class = "radio" type = "radio" name = "difficult" value = "かんたん"><p>かんたん</p>
